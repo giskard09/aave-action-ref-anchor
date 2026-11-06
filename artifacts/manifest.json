@@ -1,0 +1,54 @@
+{
+  "action_ref": "d036b415fbcaa0aee9d3ffe76850afd9d0cf879c9b4e34218b9fd7ac7f642119",
+  "anchor_chain": "Base mainnet (chainId 8453)",
+  "anchor_ref_bytes32": "0xd036b415fbcaa0aee9d3ffe76850afd9d0cf879c9b4e34218b9fd7ac7f642119",
+  "anchor_registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
+  "confirmation": {
+    "chainId": 8453,
+    "data": "0x852a56a500000000000000000000000000000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000001388000000000000000000000000000000000000000000000000000000000000deadbeef",
+    "from": "0x00000000000000000000000000000000DeaDBeef",
+    "operations": [
+      "SPOKE_SUPPLY"
+    ],
+    "to": "0x17905Db0e4A3514467539956c084180616AE7B8D",
+    "value": "0"
+  },
+  "envelope": {
+    "action_ref": "d036b415fbcaa0aee9d3ffe76850afd9d0cf879c9b4e34218b9fd7ac7f642119",
+    "capability": "mcp.tool.prepare_action",
+    "confirmation_digest": "ca8c4dcbb465a34a3f970d3775c595c8d153277899f2d9c97de0bfe3571abdcf",
+    "generated_at_utc": "2026-11-06T20:43:32.000Z",
+    "hash_algo": "sha256",
+    "packet_version": "1.0",
+    "params_digest": "f6cf4d04b2f71fb7e59c8f892ef2da0fe17bedead53185d8f4c08ad72677c717",
+    "preimage": {
+      "action_type": "aave.mcp.prepare_action",
+      "agent_id": "worked-example.aave-action-ref-anchor",
+      "scope": "aave:mcp:server:mcp.aave.com:tool:prepare_action:action:supply:version:v4",
+      "timestamp": "2026-11-06T20:43:32.000Z"
+    },
+    "preimage_format": "jcs-rfc8785-v1",
+    "result_digest": "c9e654e8902aa47de7edcd7ab902ed16ef68b2d1beb54a4644aada70c1964b49"
+  },
+  "fixture_id": "aave-mcp-prepare-action-supply-worked-example",
+  "jcs_payload": "{\"action_type\":\"aave.mcp.prepare_action\",\"agent_id\":\"worked-example.aave-action-ref-anchor\",\"scope\":\"aave:mcp:server:mcp.aave.com:tool:prepare_action:action:supply:version:v4\",\"timestamp\":\"2026-11-06T20:43:32.000Z\"}",
+  "params": {
+    "action": "supply",
+    "amount": "0.005",
+    "reserveId": "ODQ1Mzo6MHgxNzkwNURiMGU0QTM1MTQ0Njc1Mzk5NTZjMDg0MTgwNjE2QUU3QjhEOjo3",
+    "sender": "0x00000000000000000000000000000000dEaDbEEF",
+    "tool": "prepare_action",
+    "version": "v4"
+  },
+  "preimage": {
+    "action_type": "aave.mcp.prepare_action",
+    "agent_id": "worked-example.aave-action-ref-anchor",
+    "scope": "aave:mcp:server:mcp.aave.com:tool:prepare_action:action:supply:version:v4",
+    "timestamp": "2026-11-06T20:43:32.000Z"
+  },
+  "provenance": "params and confirmation are REAL: captured from a live tools/call request against Aave's official MCP server (mcp.aave.com) on 2026-11-06T20:43:32.000Z, for a genuine Base mainnet (chainId 8453) USDC v4 market discovered via a real get_markets call in the same session. confirmation is prepare_action's own real data.originalTransaction -- the unsigned supply transaction the sender wallet would sign, byte-for-byte as the server returned it. The sender is the same obviously-synthetic 'dEaDbEEF' placeholder address wdk-action-ref-anchor uses, not a wallet we control; no approval was signed and no transaction was broadcast (prepare_action is declared readOnlyHint/destructiveHint:false by the server's own tools/list, so building it is free). result is MODELED, not live: get_transaction_processed's own tools/list entry declares no outputSchema and its description names exactly one field ('processed'); reaching that step for real would require signing and broadcasting both the approval and the supply transaction, spending real gas through a funded wallet, out of proportion to a worked example. No claim that mcp.aave.com or aave/skills emits action_ref today, and no claim of integration, adoption, or endorsement by Aave.",
+  "result": {
+    "processed": true
+  },
+  "spec": "action-ref-v1 (argentum-core, docs/spec/action-ref.md)"
+}
