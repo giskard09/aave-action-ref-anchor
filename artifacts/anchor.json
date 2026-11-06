@@ -1,0 +1,13 @@
+{
+  "description": "On-chain anchor of the action_ref produced in this repo.",
+  "provenance_disclaimer": "The anchored ref is action_ref derived per action-ref-v1 for a real, live prepare_action (supply) call against Aave's official MCP server (mcp.aave.com). confirmation is the real data.originalTransaction the server returned (not modeled); result is modeled per PROVENANCE.md. No adoption or endorsement by Aave is implied.",
+  "anchor_ref_bytes32": "0xd036b415fbcaa0aee9d3ffe76850afd9d0cf879c9b4e34218b9fd7ac7f642119",
+  "registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
+  "chain": "Base mainnet (chainId 8453)",
+  "function": "anchor(bytes32)",
+  "event": "Anchored(bytes32 indexed ref, address indexed anchoredBy, uint256 timestamp)",
+  "tx": "0xcf0a16285d861041fb26229ffe414279726e65c55cbf7d71a113126809a3309e",
+  "block": 54039753,
+  "anchored_by": "Rama operator wallet",
+  "anchored_at_utc": "2026-11-06T20:52:06Z"
+}
